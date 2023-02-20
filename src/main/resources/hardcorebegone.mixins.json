@@ -1,12 +1,11 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "net.fabricmc.example.mixin",
+  "package": "me.kikugie.hardcorebegone.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-  ],
-  "client": [
-    "ExampleMixin"
+    "MinecraftServerMixin",
+    "ServerPlayerEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1
