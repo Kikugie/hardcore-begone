@@ -10,7 +10,7 @@ public class HardcoreMod implements ModInitializer {
     public static File worldLocation;
     private static boolean isIntegratedHardcoreServer = false;
 
-    public static boolean isIsIntegratedHardcoreServer() {
+    public static boolean isIntegratedHardcoreServer() {
         return isIntegratedHardcoreServer;
     }
 

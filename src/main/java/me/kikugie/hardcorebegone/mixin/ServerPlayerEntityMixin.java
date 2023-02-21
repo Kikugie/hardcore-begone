@@ -26,7 +26,7 @@ public abstract class ServerPlayerEntityMixin {
 
     @Inject(method = "onDeath", at = @At("HEAD"))
     private void adiosHardcoreWorld(DamageSource damageSource, CallbackInfo ci) {
-        if (!HardcoreMod.isIsIntegratedHardcoreServer() || !Objects.equals(this.getClass(), ServerPlayerEntity.class))
+        if (!HardcoreMod.isIntegratedHardcoreServer() || !Objects.equals(this.getClass(), ServerPlayerEntity.class))
             return;
         HardcoreMod.worldLocation = Paths.get(this.server.getRunDirectory().getAbsolutePath(), "saves", this.server.getOverworld().getChunkManager().threadedAnvilChunkStorage.getSaveDir()).toFile();
         this.networkHandler.disconnect(Text.of("§cRoses are red;\nThis journey was fun,\nbut now your hardcore world is gone."));
